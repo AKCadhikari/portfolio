@@ -106,62 +106,111 @@ section {
     box-shadow: 0 0 10px red, 0 0 20px red;
 }
 
-.projects-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
 
-.project-card {
-    padding: 20px;
-    border: 2px solid red;
-    border-radius: 8px;
-    background: black;
-    box-shadow: 0 0 10px red, 0 0 20px red;
-}
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
 .project-item {
+    position: relative;
     width: 300px;
-    padding: 20px;
-    background: black;
-    border: 2px solid red;
+    overflow: hidden;
     border-radius: 10px;
+    border: 2px solid red;
+    background: black;
     box-shadow: 0 0 10px red, 0 0 20px red;
     text-align: center;
-    transition: transform 0.3s;
-}
-
-.project-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.project-item h3 {
-    color: white;
-    margin: 15px 0 10px;
-}
-
-.project-item p {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.project-item a {
-    color: red;
-    text-decoration: none;
-    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px red, 0 0 30px red;
 }
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid red;
+}
+
+.project-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.project-item p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: black;
+    background: red;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px red;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.project-link:hover {
+    background: white;
+    color: red;
+    transform: scale(1.1);
+}
+
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 90%;
+}
+
+.lightbox img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+
 
