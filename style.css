@@ -119,3 +119,49 @@ section {
     background: black;
     box-shadow: 0 0 10px red, 0 0 20px red;
 }
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    width: 300px;
+    padding: 20px;
+    background: black;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px red, 0 0 20px red;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    color: white;
+    margin: 15px 0 10px;
+}
+
+.project-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.project-item a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
